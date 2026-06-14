@@ -394,6 +394,24 @@ section {
   text-shadow: 0 0 30px rgba(var(--accent-rgb), 0.35);
   margin-bottom: 0.5rem;
 }
+.prose h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.prose h2:first-of-type {
+  margin-top: 1.5rem;
+}
+.prose ul,
+.prose ol {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+  line-height: 1.8;
+}
 .prose .back-link {
   display: inline-flex;
   align-items: center;
@@ -428,6 +446,207 @@ footer a {
 }
 footer a:hover {
   color: var(--accent);
+}
+
+/* === Download Page === */
+.download-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.download-page main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.download-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.download-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 55% at 50% 0%,
+    rgba(var(--accent-rgb), 0.11),
+    transparent
+  );
+  pointer-events: none;
+}
+.download-section > * {
+  position: relative;
+  z-index: 1;
+}
+.download-hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--accent);
+  text-shadow: 0 0 30px rgba(var(--accent-rgb), 0.35);
+  margin-bottom: 0.5rem;
+}
+.download-hero p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.download-primary {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 4px;
+}
+.download-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition:
+    border-color var(--t),
+    box-shadow var(--t),
+    transform var(--t);
+}
+.download-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px rgba(var(--accent-rgb), 0.12);
+  transform: translateY(-2px);
+}
+.download-card.detected {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.15);
+}
+.download-card .platform-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  fill: var(--text);
+  stroke: none;
+}
+.download-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+.download-card .detected-badge {
+  display: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.download-card.detected .detected-badge {
+  display: block;
+}
+.download-card .download-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+.download-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.download-card .download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--blue) 100%);
+  color: #000;
+  transition:
+    transform var(--t),
+    box-shadow var(--t);
+}
+.download-card .download-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(var(--accent-rgb), 0.3);
+  color: #000;
+}
+.download-card.detected .download-btn {
+  box-shadow: 0 4px 18px rgba(var(--accent-rgb), 0.22);
+}
+.download-link-secondary {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: color var(--t);
+}
+.download-link-secondary:hover {
+  color: var(--accent);
+}
+.show-all-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color var(--t);
+}
+.show-all-toggle:hover {
+  color: var(--accent);
+}
+.show-all-toggle svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--t);
+}
+.show-all-toggle.expanded svg {
+  transform: rotate(180deg);
+}
+.download-others {
+  width: 100%;
+  max-width: var(--max-w);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 0.4s ease,
+    opacity 0.3s ease,
+    margin 0.3s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+.download-others.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+.download-others-inner {
+  overflow: hidden;
+}
+.download-others-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  padding: 4px;
 }
 
 /* === Responsive === */
@@ -467,5 +686,14 @@ footer a:hover {
     width: 88px;
     height: 88px;
     border-radius: 20px;
+  }
+  .download-section {
+    padding: 3.5rem 1.25rem;
+  }
+  .download-primary {
+    max-width: 100%;
+  }
+  .download-others-grid {
+    grid-template-columns: 1fr;
   }
 }
