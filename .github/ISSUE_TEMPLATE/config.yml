@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ☕ Support on Ko-fi
+    url: https://ko-fi.com/HazAnwar
+    about: Enjoy Markaz? Consider supporting its development!
+  - name: 📥 Download Markaz on all platforms
+    url: https://hazanwar.github.io/haztech/markaz
+    about: Download Markaz on all platforms.
