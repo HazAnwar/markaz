@@ -26,6 +26,14 @@ Markaz is a beautiful and intuitive Islamic companion app for iOS. It provides a
 | ------------------- | -------------------------------------------------------------------- |
 | **GitHub Releases** | [Latest release](https://github.com/HazAnwar/markaz/releases/latest) |
 
+## Support
+
+If you enjoy Leap Launcher and want to support its development, consider buying me a coffee:
+
+<a href="https://ko-fi.com/HazAnwar">
+  <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi" />
+</a>
+
 ## Contributing
 
 Found a bug or have a feature idea? Feel free to [open an issue](https://github.com/HazAnwar/markaz/issues/new/choose). Contributions and feedback are always welcome.
